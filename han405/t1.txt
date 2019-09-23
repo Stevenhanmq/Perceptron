@@ -1,0 +1,20 @@
+import numpy as np
+import cvxopt as co
+
+np.set_printoptions(precision=4)
+X = np.array([[-3, 2], [-2, 1.5], [-1, 1], [0, 0.5], [1, 0]])
+
+y = np.array([[1], [1], [1], [-1], [-1]])
+
+import perceptron
+
+perceptron.run(1,X,y)
+perceptron.run(2,X,y)
+perceptron.run(3,X,y)
+perceptron.run(4,X,y)
+perceptron.run(5,X,y)
+perceptron.run(6,X,y)
+perceptron.run(7,X,y)
+
+import svm
+svm.run(X,y)

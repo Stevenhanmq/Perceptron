@@ -1,0 +1,22 @@
+import numpy as np
+np.set_printoptions(precision=4)
+X = np.array([[-3, 2],
+            [-2, 1.5],
+            [-1, 1],
+            [0, 0.5],
+            [1, 0]])
+y = np.array([[1], [1], [1], [-1], [-1]])
+
+import perceptron
+theta_perceptron, num = perceptron.run(10,X,y)
+
+import svm
+theta_svm = svm.run(X,y)
+
+import predict
+predict.run(theta_perceptron, np.array([[1], [-2]]))
+
+predict.run(theta_perceptron, np.array([[-2], [2]]))
+
+predict.run(theta_svm, np.array([[1], [-2]]))
+
